@@ -2,12 +2,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>Home page</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
-</h1>
+<h1><%= "Вас приветствует сервис по учету семейных покупок!" %></h1>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
+<a href="select-family-members">Family members</a>
+&nbsp&nbsp
+<a href="hello">Payments</a>
+&nbsp&nbsp
+<a href="hello">Good</a>
+&nbsp&nbsp
+<a href="select-good-types">Good types</a>
 </body>
 </html>
