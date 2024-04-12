@@ -9,27 +9,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29a76838-4cef-481f-9c7c-616f97ea8eca" name="Changes" comment="First commit">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/FamilyMembers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/GoodTypes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/MyConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/servlets/FamilyMembersServlets/FamilyMembersDeleteAllServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/servlets/FamilyMembersServlets/FamilyMembersDeleteIdxServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/servlets/FamilyMembersServlets/FamilyMembersInsertServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/servlets/FamilyMembersServlets/FamilyMembersSelectServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/servlets/GoodTypesServlets/GoodTypesDeleteAllServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/servlets/GoodTypesServlets/GoodTypesDeleteIdxServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/servlets/GoodTypesServlets/GoodTypesInsertServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/servlets/GoodTypesServlets/GoodTypesSelectServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/servlets/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/goodtypes.jsp" afterDir="false" />
+    <list default="true" id="29a76838-4cef-481f-9c7c-616f97ea8eca" name="Changes" comment="Реализованы классы GoodTypes и FamilyMembers, а также соответствующие сервлеты">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/Payments.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/servlets/GoodServlets/GoodSelectServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/servlets/GoodServlets/GoodsDeleteAllServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/servlets/GoodServlets/GoodsDeleteIdxServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/servlets/GoodServlets/GoodsInsertServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/servlets/PaymentsServlets/PaymentsDeleteAllServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/servlets/PaymentsServlets/PaymentsDeleteIdxServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/servlets/PaymentsServlets/PaymentsInsertServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/servlets/PaymentsServlets/PaymentsSelectServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/payments/GoodTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/GoodTypes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/payments/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/Goods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/payments/servlets/GoodTypesServlets/GoodTypesInsertServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/payments/servlets/GoodTypesServlets/GoodTypesInsertServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +65,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/micro/IdeaProjects/Family",
+    "last_opened_file_path": "C:/Users/micro/IdeaProjects/Payments",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -207,7 +200,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712739587996</updated>
-      <workItem from="1712739589077" duration="20459000" />
+      <workItem from="1712739589077" duration="22840000" />
+      <workItem from="1712923404654" duration="3681000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -217,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712739790161</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Реализованы классы GoodTypes и FamilyMembers, а также соответствующие сервлеты">
+      <option name="closed" value="true" />
+      <created>1712768777266</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712768777266</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +250,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+    <MESSAGE value="Реализованы классы GoodTypes и FamilyMembers, а также соответствующие сервлеты" />
+    <option name="LAST_COMMIT_MESSAGE" value="Реализованы классы GoodTypes и FamilyMembers, а также соответствующие сервлеты" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Payments$Tomcat_10_1_20.ic" NAME="Tomcat 10.1.20 Coverage Results" MODIFIED="1712745041907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

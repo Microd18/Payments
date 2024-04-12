@@ -19,7 +19,7 @@ public class GoodTypes extends MyConnection {
 
         while (rs.next()) {
             String str ="Id : " + rs.getInt("good_type_id") +
-                    " | " + "Название : " +
+                    " | " + "Название категории товара: " +
                     rs.getString(2);
             list.add(str);
         }

@@ -20,10 +20,13 @@ public class Goods extends MyConnection {
         ResultSet rs = stmt.executeQuery("SELECT * FROM goods");
 
         while (rs.next()) {
-            String str = "Id : " + rs.getInt("good_type_id") +
-                    " | " + "Название : " +
-                    rs.getString(2);
-            list.add(str);
+            String str = "Id : " + rs.getInt("good_id") +
+                    " | " + "Название товара : " +
+                    rs.getString(2) +
+                    " | " + "Категория товара : " +
+                    rs.getString(3);
+
+                    list.add(str);
         }
         rs.close();
         stmt.close();
@@ -32,13 +35,13 @@ public class Goods extends MyConnection {
 
     public void deleteAll() throws SQLException {
         Statement stmt = getConnection().createStatement();
-        stmt.executeUpdate("TRUNCATE goodtypes RESTART IDENTITY CASCADE");
+        stmt.executeUpdate("TRUNCATE goods RESTART IDENTITY CASCADE");
         stmt.close();
     }
 
     public void deleteFromIndex(int index) throws SQLException {
         Statement stmt = getConnection().createStatement();
-        String str = String.format("DELETE FROM goodtypes WHERE good_type_id ='%d'", index);
+        String str = String.format("DELETE FROM goods WHERE good_id ='%d'", index);
         stmt.executeUpdate(str);
         stmt.close();
     }

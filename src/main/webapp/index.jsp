@@ -9,9 +9,9 @@
 <br/>
 <a href="select-family-members">Family members</a>
 &nbsp&nbsp
-<a href="hello">Payments</a>
+<a href="select-payments">Payments</a>
 &nbsp&nbsp
-<a href="hello">Good</a>
+<a href="/select-goods">Good</a>
 &nbsp&nbsp
 <a href="select-good-types">Good types</a>
 </body>

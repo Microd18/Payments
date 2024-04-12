@@ -1,6 +1,7 @@
-package com.example.payments.servlets.GoodTypesServlets;
+package com.example.payments.servlets.PaymentsServlets;
 
-import com.example.payments.GoodTypes;
+import com.example.payments.FamilyMembers;
+import com.example.payments.Payments;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -9,13 +10,14 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
-@WebServlet(name = "insert good types", value = "/insert-good-types")
-public class GoodTypesInsertServlet extends HttpServlet {
-    public GoodTypes goodTypes;
+@WebServlet(name = "select payments", value = "/select-payments")
+public class PaymentsSelectServlet extends HttpServlet {
+    public Payments payments;
 
     public void init() {
-        goodTypes = new GoodTypes();
+        payments = new Payments();
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -24,13 +26,11 @@ public class GoodTypesInsertServlet extends HttpServlet {
 
         try {
             Class.forName("org.postgresql.Driver");
-            String type = request.getParameter("type");
-
-            if (type == null) {
-                out.println("Вы можете добавить данные в таблицу используя URL адрес");
-            } else {
-                goodTypes.insertGoodTypes(type);
-                out.println("Категория " + "\"" + type + "\"" + " добавлена в таблицу!");
+            ArrayList<String> list = new ArrayList<>(payments.selectAll());
+            out.println("<h3>" + "Платежи" + "</h3>");
+            out.println("<h3>" + "==============================" + "</h3>");
+            for (String str : list) {
+                out.println("<h3>" + str + "</h3>");
             }
 
         } catch (ClassNotFoundException | SQLException e) {
